@@ -117,7 +117,93 @@ public class Main2 {
 				System.out.print("-");
 			}
 		}
+		System.out.println();
 		
-		//15
+		//15 ループを用いて、１から100までの数字を表示しなさい。ただし、このとき、数は10ごとに改行すること。
+		for (int i = 1; i <= 100; i++) {
+			System.out.print(i + " ");
+			if (i % 10 == 0) {
+				System.out.println();
+			}
+		}
+		
+		//16 forの二重ループを用いて、以下のように九九の表を作りなさい。
+		for (int i = 1; i < 10; i++) {
+			for (int j = 1; j < 10; j++) {
+				System.out.print(j + "*" + i + "=" + (j * i) + " ");
+				if (j == 9) {
+					System.out.println();
+				}
+			}
+		}
+		
+		//17 forの二重ループを用いて、以下のような図形を表示させるプログラムを作りなさい。
+		for (int i = 0; i < 10; i++) { //行
+			for (int j = 0; j < 10; j++) { //列
+				if (i >= j) {
+					System.out.print("+");
+				} else {
+					System.out.print("-");
+				}
+			}
+			System.out.println();
+		}
+		
+		//18 forの二重ループを用いて、以下のような図形を表示させるプログラムを作りなさい。
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				if (i == j) {
+					System.out.print("+");
+				} else {
+					System.out.print("-");
+				}
+			}
+			System.out.println();
+		}
+		
+		//FizzBuzz
+		//for
+		for (int i = 1; i <= 100; i++) {
+			if (i % 15 == 0) {
+				System.out.println("FizzBuzz");
+			} else if (i % 5 == 0) {
+				System.out.println("Buzz");
+			} else if (i % 3 == 0) {
+				System.out.println("Fizz");
+			} else {
+				System.out.println(i);
+			}
+		}
+		
+		//while
+		int i = 0;
+		while (i < 100) {
+			i++;
+			if (i % 15 == 0) {
+				System.out.println("FizzBuzz");
+			} else if (i % 5 == 0) {
+				System.out.println("Buzz");
+			} else if (i % 3 == 0) {
+				System.out.println("Fizz");
+			} else {
+				System.out.println(i);
+			}
+		}
+		
+		//do while
+		int j = 0;
+		do {
+			j++;
+			if (j % 15 == 0) {
+				System.out.println("FizzBuzz");
+			} else if (j % 5 == 0) {
+				System.out.println("Buzz");
+			} else if (j % 3 == 0) {
+				System.out.println("Fizz");
+			} else {
+				System.out.println(j);
+			}
+		} while (j < 100);
+		
 	}
 }
